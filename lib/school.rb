@@ -24,7 +24,10 @@ class School
   end
   
   def sort
-    @roster.sort.flatten
+    sorted_hash = {}
+      @roster.each do |name, grade|
+      sorted_hash[grade] = name.sort! 
+    end
   end
     
 end
